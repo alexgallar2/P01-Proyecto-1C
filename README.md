@@ -1,18 +1,17 @@
-# Proyecto del Primer Cuatrimestre Fundamentos de Programación (Curso  \<XX\>/\<YY\>)
-Autor/a: \<nombre del autor\>   uvus:\<uvus del autor\>
+# Proyecto del Primer Cuatrimestre Fundamentos de Programación (Curso  \<22\>/\<23\>)
+Autor/a: \<Alejandro Gallardo González\>   uvus:\<alegalgon4\>
 
-Aquí debes añadir la descripción del dataset y un enunciado del dominio del proyecto.
+En este dataset se porporcionan los datos de distintos seismos o terremotos de distintos años
 
 
 ## Estructura de las carpetas del proyecto
 
 * **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.
-  * **\<modulo1.py\>**: Describe aquí el módulo principal.
-  * **\<modulo1_test.py\>**: Describe aquí el módulo de pruebas.
-  * **\<modulo2.py\>**: Añade descripciones para el resto de módulos que pueda tener tu proyecto. Por ejemplo, sería conveniente tener un módulo separado con funciones genéricas para dibujar gráficas y/o otro con funciones genéricas de conversión de tipos. 
+  * **\<funciones.py\>**: Aqui se encuentra el codigo principal donde se ejecuta el proyecto .
+  * **\<test.py\>**: Aqui se encuentra el modulo de pruebas donde se llaman a las distintas funciones del proyecto y se ejecutan por terminal.
+  * **\<funciones_aux.py\>**: Aqui se encuentran las funciones auxiliares que ayudaran a las principales en procesos mas secundarios.
 * **/data**: Contiene el dataset o datasets del proyecto
-    * **\<dataset1.csv\>**: Añade una descripción genérica del dataset.
-    * **\<dataset2.csv\>**: Añade una descripción del resto de datasets que puedas tener.
+    * **\<seismos.csv\>**: Contiene datos de distintos seismos a lo largo de varios años y en distintas partes del mundo.
     
 ## Estructura del *dataset*
 
@@ -20,31 +19,37 @@ Aquí debes describir la estructura del dataset explicando qué representan los 
 
 El dataset está compuesto por \<N\> columnas, con la siguiente descripción:
 
-* **\<columna 1>**: de tipo \<tipo\>, representa....
-* **\<columna 2>**: de tipo \<tipo\>, representa....
-....
+* **\<columna 1>**: de tipo \<entero\>, representa un numero de identificacion para cada seismo
+* **\<columna 2>**: de tipo \<booleano\>, representa si el seismo acarrea consigo un tsunami
+* **\<columna 3>**: de tipo \<fecha\>, representa el dia en el que se produjo el seismo
+* **\<columna 4>**: de tipo \<hora\>, representa la hora en la que se produjo el seismo
+* **\<columna 5>**: de tipo \<cadena\>, representa el pais donde se produjo el seismo
+* **\<columna 6>**: de tipo \<real\>, representa la latitud del seismo en coordenadas del globo
+* **\<columna 7>**: de tipo \<real\>, representa la longitud del seismo en coordenadas del globo
+* **\<columna 8>**: de tipo \<entero\>, representa el numero de muertes causadas
+* **\<columna 9>**: de tipo \<entero\>, representa el numero de heridos causados
 
 ## Tipos implementados
 
-Descrbe aquí la o las namedtuple que defines en tu proyecto.
+la namedtuple implementada en la funcion de lectura contiene los indicativos de los datos de cada columna
 
 ## Funciones implementadas
-Añade aquí descripciones genéricas de las funciones, que luego debes acompañar con comentarios de tipo documentación en el código
 
-### \<modulo 1\>
+la funcion lector_seismos como su nombre indica crea una lista de tuplas donde se recogen los datos del dataset ordenados por tipos
 
-* **<funcion 1>**: Descripción de la función 1.
-* **<funcion 2>**: Descripción de la función 2.
-* ...
+### \<funciones\>
 
-### \<test modulo 1\>
+* **<lector_seismos>**: Su funcion es una lectura completa del dataset proporcionado.
 
-* **<test funcion 1>**: Descripción de las pruebas realizadas a la función 1.
+
+### \<test \>
+
+* **<test funcion 1>**: Llama a la funcion de lector_seismos para ejecutarla
 * **<test funcion 2>**: Descripción de las pruebas realizadas a la función 2.
 * ...
 * 
-### \<modulo 2\>
+### \<funciones_aux\>
 
-* **<funcion 1>**: Descripción de la función 1.
-* **<funcion 2>**: Descripción de la función 2.
+* **<parse_muertes>**: comprueba que no este vacia la cadena y de no estarlo la transforma en entero
+* **<parse_heridos>**: comprueba que no este vacia la cadena y de no estarlo la transforma en entero
 * ...
