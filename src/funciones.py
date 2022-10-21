@@ -3,7 +3,7 @@ import csv
 from datetime import datetime
 import funciones_aux
 
-recorridos = namedtuple("recorridos", "ID,TSUNAMI,FECHA,HORA,PAIS,LATITUD,LONGITUD,MUERTES,HERIDOS")
+seismo = namedtuple("seismo", "ID,TSUNAMI,FECHA,HORA,PAIS,LATITUD,LONGITUD,MUERTES,HERIDOS")
 def lector_seismos(archivo):
     lista = []
     with open (archivo) as f:
@@ -18,7 +18,7 @@ def lector_seismos(archivo):
             longitud = float(long)
             muertes = funciones_aux.parse_muertes(muert)
             heridos = funciones_aux.parse_heridos(her)
-            tupla = recorridos(ident, tsunami, fecha2, hora2, pais, latitud, longitud, muertes, heridos)
+            tupla = seismo(ident, tsunami, fecha2, hora2, pais, latitud, longitud, muertes, heridos)
             lista.append(tupla)
         return lista
 
