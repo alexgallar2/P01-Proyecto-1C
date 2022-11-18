@@ -40,14 +40,21 @@ la funcion lector_seismos como su nombre indica crea una lista de tuplas donde s
 ### \<funciones\>
 
 * **<lector_seismos>**: Su funcion es una lectura completa del dataset proporcionado.
-
+* **<filtra_por_pais>**: Filtra las filas dependiendo del pais dado
+* **<promedio_muertes>**: Indica la media de las muertes totales
+* **<ordenar_por_fecha>**: Ordena las filas de mas antiguo a mas reciente dependiendo de si contiene tsunami o no
+* **<maximos_heridos>**: Indica las filas con el maximo numero de heridos del documento
+* **<pais_mas_frecuente>**: Indica el pais mas frecuente en tener seismos 
 
 ### \<test \>
 
-* **<test funcion 1>**: Llama a la funcion de lector_seismos para ejecutarla
-* **<test funcion 2>**: Descripción de las pruebas realizadas a la función 2.
-* ...
-* 
+* **<test test_lector_seismos>**: Llama a la funcion de lector seismos para ejecutarla
+* **<test test_filtra_por_pais>**: Llama a la funcion que filtra por pais, hay que indicar el pais deseado
+* **<test test_promedio_muertes>**: Llama a la funcion de promedio muertes 
+* **<test test_ordenar_por_fecha>**: Llama a la funcion de ordenar por fecha en la que hay que indicar el numero de filas a mostrar y el valor de la variable tsunami
+* **<test test_maximos_heridos>**: Llama a la funcion de maximos heridos
+* **<test test_pais_mas_frecuente>**: Llama a la funcion de pais mas frecuente
+
 ### \<funciones_aux\>
 
 * **<parse_muertes>**: comprueba que no este vacia la cadena y de no estarlo la transforma en entero
